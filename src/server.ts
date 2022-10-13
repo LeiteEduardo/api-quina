@@ -9,7 +9,7 @@ const nodeSchedule = require('node-schedule')
 const data = new Date(2022, 9, 12, 17, 30);
 
 //const job = nodeSchedule.scheduleJob('*/15 23 * * 1-6', () => {
-    nodeSchedule.scheduleJob('*/1 21 * * 1-6', async () => {
+    nodeSchedule.scheduleJob('*/15 21 * * 1-6', async () => {
     console.log(Date())
 
     const latestGame = await axios.get("https://loteriascaixa-api.herokuapp.com/api/quina/latest")
